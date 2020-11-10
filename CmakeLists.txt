@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.4.1)
+
+project (pinyin)
+
+set(SRC_CPP_PATH ./)
+#source include
+include_directories(
+        ${SRC_CPP_PATH}
+)
+
+aux_source_directory(${SRC_CPP_PATH} SRC_MAIN)
+
+set(ALL_SRCS
+        ${SRC_MAIN}
+)
+
+add_executable(${PROJECT_NAME} ${ALL_SRCS})
